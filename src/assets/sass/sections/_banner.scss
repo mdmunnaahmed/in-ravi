@@ -1,0 +1,123 @@
+// Banner Section
+.banner-section {
+	padding: 100px 0;
+	position: relative;
+	@include breakpoint(max-lg) {
+		padding: 50px 0;
+	}
+	@include breakpoint(max-md) {
+		padding: 30px 0;
+	}
+}
+.banner-thumb {
+	position: absolute;
+	right: 0;
+	top: 100px;
+	max-width: 700px;
+	@include breakpoint(max-xxl) {
+		max-width: 550px;
+	}
+	@include breakpoint(max-xl) {
+		max-width: 450px;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+.banner-thumb-two {
+	@include breakpoint(max-lg) {
+		max-width: 500px;
+		padding-top: 40px;
+		margin-inline: auto;
+	}
+}
+.banner-content {
+	max-width: 610px;
+	@include breakpoint(max-xxl) {
+		max-width: 550px;
+	}
+	@include breakpoint(max-xl) {
+		max-width: 450px;
+	}
+	@include breakpoint(max-lg) {
+		max-width: 550px;
+		margin-inline: auto;
+		text-align: center;
+	}
+	.logo {
+		width: 120px;
+		height: 120px;
+		margin-bottom: 30px;
+		@include breakpoint(max-lg) {
+			margin-inline: auto;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: unset !important;
+			max-height: unset !important;
+			object-fit: contain;
+		}
+	}
+	&__subtitle {
+		font-size: 20px;
+		font-weight: 500;
+		max-width: 290px;
+		@include breakpoint(max-lg) {
+			margin-inline: auto;
+			max-width: 300px;
+		}
+	}
+	&__title {
+		margin: 40px 0;
+		position: relative;
+		@include breakpoint(max-xl) {
+			margin-top: 25px;
+		}
+	}
+	.btn {
+		margin-top: 40px;
+	}
+	.shape {
+		position: absolute;
+		bottom: -42px;
+		transform: rotate(-7deg);
+		left: 222px;
+		
+		@include breakpoint(max-md) {
+			bottom: -40px;
+		}
+		@include breakpoint(max-xs) {
+			left: 130px;
+			bottom: -30px;
+		}
+	}
+}
+.border-content {
+	padding: 20px;
+	gap: 10px;
+	background: #ffffff;
+	border: 1px solid hsl(var(--border));
+	border-radius: 6px;
+	.date-form-group {
+		margin-top: 20px;
+	}
+	.datepicker-here {
+		height: 40px;
+		width: 200px;
+		color: hsl(var(--body));
+	}
+}
+.date-form-group {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	.input-icon {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: hsl(var(--body) / 0.5);
+	}
+}
+// Banner Section

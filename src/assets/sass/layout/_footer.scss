@@ -1,0 +1,106 @@
+// Footer-Section Starts Here 
+.footer-section {
+    overflow: hidden;
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+}
+.footer-shape {
+    position: absolute;
+    left: 59px;
+    right: 59px;
+    top: 18%;
+    bottom: 0;
+    z-index: -1;
+    @include breakpoint (max-xxl) {
+        top: 27%;
+    }
+    @include breakpoint (max-lg) {
+        top: auto;
+        left: 10px;
+        right: 10px;
+    }
+    @include breakpoint (max-md) {
+        left: 0;
+        right: 0;
+    }
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+.footer-links {
+    &__title {
+        @include breakpoint (max-md) {
+            margin-bottom: 20px;
+        }
+    }
+    ul {
+        li {
+            padding: 9px 0;
+            @include breakpoint (max-md) {
+                padding: 7px 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+}
+.footer-top {
+    padding-top: 118px;
+    padding-bottom: 100px;
+    @include breakpoint (max-xxl) {
+        padding-top: 90px;
+        padding-top: 90px;
+    }
+    @include breakpoint (max-md) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+.contact-wrapper {
+    &__subtext {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 62px;
+        @include breakpoint(max-xl) {
+		font-size: 22px;
+	    }
+        @include breakpoint (max-md) {
+            margin-bottom: 30px;
+        }
+        @include breakpoint(max-sm) {
+            font-size: 20px;
+        }
+    }
+    P {
+        font-weight: 500;
+    }
+    .contact-info {
+        margin-bottom: 42px;
+        @include breakpoint (max-md) {
+            margin-bottom: 30px;
+        }
+    }
+}
+.footer-bottom {
+    border-top: 1px solid hsl(var(--border));
+    padding: 40px 0;
+    @include breakpoint (max-xxl) {
+        padding: 30px 0;
+    }
+    @include breakpoint (max-sm) {
+        padding: 20px 0;
+    }
+    * {
+        font-weight: 500;
+    }
+    .links {
+        gap: 10px 20px;
+    }
+}

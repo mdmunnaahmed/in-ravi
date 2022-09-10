@@ -1,0 +1,78 @@
+.btn {
+	padding: 19px 64px;
+	font-weight: 600;
+	outline: none !important;
+	box-shadow: none !important;
+	@extend %transition;
+	border-radius: 6px;
+	z-index: 1;
+	font-size: 20px;
+	line-height: 1;
+	@include breakpoint (max-xxl) {
+		font-size: 18px;
+	}
+	@include breakpoint (max-sm) {
+		font-size: 16px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	&.btn--lg {
+		padding: 18px 70px !important;
+		@include breakpoint(lg) {
+			font-size: 18px;
+		}
+	}
+	&.btn--md {
+		padding: 7px 30px !important;
+	}
+	&.btn--sm {
+		padding: 5px 15px !important;
+		font-size: 14px;
+	}
+	&.btn--xs {
+		padding: 0px 10px !important;
+		font-size: 13px;
+	}
+}
+
+$colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "success" hsl(var(--success)), "danger" hsl(var(--danger)), "warning" hsl(var(--warning)), "info" var(--info), "white" hsl(var(--white)), "dark" hsl(var(--dark)), "base" hsl(var(--base));
+
+@each $name, $color in $colors {
+	.btn--#{$name} {
+		background-color: $color;
+		border: 1px solid $color;
+		color: hsl(var(--white));
+		&:hover {
+			color: $color;
+		}
+	}
+}
+.btn--white {
+	color: hsl(var(--base));
+}
+
+@each $name, $color in $colors {
+	.btn--outline-#{$name} {
+		background-color: transparent;
+		border: 1px solid $color;
+		color: $color;
+		&:hover {
+			color: hsl(var(--white));
+			border-color: $color;
+			background-color: $color;
+		}
+	}
+}
+.btn--outline-white {
+	color: hsl(var(--body));
+	border: 2px solid hsl(var(--border));
+}
+.cmn--btn {
+	background-color: hsl(var(--base));
+	color: hsl(var(--white));
+	padding-inline: 62px;
+	@include breakpoint (max-sm) {
+		padding-inline: 50px;
+
+	}
+}
