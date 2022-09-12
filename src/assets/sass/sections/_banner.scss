@@ -83,7 +83,7 @@
 		bottom: -42px;
 		transform: rotate(-7deg);
 		left: 222px;
-		
+
 		@include breakpoint(max-md) {
 			bottom: -40px;
 		}
