@@ -131,7 +131,7 @@ if (counter) {
 }
 
 //Faq Click Event
-$(".faq-item__title").on("click", function (e) {
+$(".faq-item__header").on("click", function (e) {
 	var element = $(this).parent(".faq-item");
 	if (element.hasClass("open")) {
 		element.removeClass("open");
