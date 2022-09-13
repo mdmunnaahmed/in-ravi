@@ -1,386 +1,458 @@
-// Section-Header Starts Here 
+// Section-Header Starts Here
 .section-header {
-    margin-bottom: 42px;
-    @include breakpoint (max-md) {
-        margin-bottom: 35px;
-    }
-    @include breakpoint (max-sm) {
-        margin-bottom: 30px;
-    }
-    &__subtitle {
-        font-weight: 600;
-        color: #6D6B72;
-        @include breakpoint (max-xxl) {
-            font-size: 36px;
-        }
-        @include breakpoint (max-md) {
-            font-size: 28px;
-        }
-        @include breakpoint (max-sm) {
-            font-size: 22px;
-        }
-    }
-    &__title {
-        font-size: 64px;
-        margin-bottom: 17px;
-        @include breakpoint (max-xxl) {
-            font-size: 48px;
-        }
-        @include breakpoint (max-md) {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-        @include breakpoint (max-sm) {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-    }
-    &__content {
-        font-size: 24px;
-        color: #6D6B72;
-        @include breakpoint (max-xxl) {
-            font-size: 20px;
-        }
-        @include breakpoint (max-sm) {
-            font-size: 18px;
-        }
-    }
+	margin-bottom: 42px;
+	@include breakpoint(max-md) {
+		margin-bottom: 35px;
+	}
+	@include breakpoint(max-sm) {
+		margin-bottom: 30px;
+	}
+	&__subtitle {
+		font-weight: 600;
+		color: #6d6b72;
+		@include breakpoint(max-xxl) {
+			font-size: 36px;
+		}
+		@include breakpoint(max-md) {
+			font-size: 28px;
+		}
+		@include breakpoint(max-sm) {
+			font-size: 22px;
+		}
+	}
+	&__title {
+		font-size: 64px;
+		margin-bottom: 17px;
+		@include breakpoint(max-xxl) {
+			font-size: 48px;
+		}
+		@include breakpoint(max-md) {
+			font-size: 42px;
+			margin-bottom: 15px;
+		}
+		@include breakpoint(max-sm) {
+			font-size: 34px;
+			margin-bottom: 10px;
+		}
+	}
+	&__content {
+		font-size: 24px;
+		color: #6d6b72;
+		@include breakpoint(max-xxl) {
+			font-size: 20px;
+		}
+		@include breakpoint(max-sm) {
+			font-size: 18px;
+		}
+	}
 }
 
-// Section-Title Starts Here 
+// Section-Title Starts Here
 .section-title {
-    margin-bottom: 50px;
-    @include breakpoint (max-xl) {
-        margin-bottom: 40px;
-    }
-    @include breakpoint (max-sm) {
-        margin-bottom: 30px;
-    }
-    &__title {
-        line-height: 1;
-    }
+	margin-bottom: 50px;
+	@include breakpoint(max-xl) {
+		margin-bottom: 40px;
+	}
+	@include breakpoint(max-sm) {
+		margin-bottom: 30px;
+	}
+	&__title {
+		line-height: 1;
+	}
 }
 
 // Learning-Section Starts Here
 .learning-left {
-    @include breakpoint (lg) {
-        margin-top: 122px;
-    }
+	@include breakpoint(lg) {
+		margin-top: 122px;
+	}
 }
 .learning-item {
-    position: relative;
-    background: hsl(var(--white));
-    box-shadow: 0px 9px 91px rgba(141, 158, 189, 0.12);
-    border-radius: 16px;
-    padding: 30px;
-    height: 210px;
-    z-index: 1;
-    overflow: hidden;
-    @include breakpoint (max-xxl) {
-        padding: 20px;
-        height: 180px;
-    }
-    @include breakpoint (max-xl) {
-        padding: 20px;
-        height: 150px;
-    }
-    &__title {
-        line-height: 1;
-        font-size: 64px;
-        @include breakpoint (max-xxl) {
-            font-size: 48px;
-        }
-    }
-    &__subtitle {
-        line-height: 1;
-        font-size: 24px;
-        font-weight: 600;
-        color: #56545C;
-        @include breakpoint (max-xxl) {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-    }
-    .shape {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
-    }
+	position: relative;
+	background: hsl(var(--white));
+	box-shadow: 0px 9px 91px rgba(141, 158, 189, 0.12);
+	border-radius: 16px;
+	padding: 30px;
+	height: 210px;
+	z-index: 1;
+	overflow: hidden;
+	@include breakpoint(max-xxl) {
+		padding: 20px;
+		height: 180px;
+	}
+	@include breakpoint(max-xl) {
+		padding: 20px;
+		height: 150px;
+	}
+	&__title {
+		line-height: 1;
+		font-size: 64px;
+		@include breakpoint(max-xxl) {
+			font-size: 48px;
+		}
+	}
+	&__subtitle {
+		line-height: 1;
+		font-size: 24px;
+		font-weight: 600;
+		color: #56545c;
+		@include breakpoint(max-xxl) {
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+	.shape {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
 }
 .learning-right {
-    @include breakpoint (max-xl) {
-    div[class*="col"]:nth-child(1) {
-        .shape  {
-            width: 120px;
-        }
-        .shape-w  {
-            width: 70px;
-        }
-        }
-    }
-    @include breakpoint (max-xl) {
-        .shape-w-two  {
-            width: 90px;
-        }
-    }   
-    @include breakpoint (max-lg) {
-        margin-top: 50px;
-    }
-    @include breakpoint (max-sm) {
-        margin-top: 40px;
-    }
+	@include breakpoint(max-xl) {
+		div[class*="col"]:nth-child(1) {
+			.shape {
+				width: 120px;
+			}
+			.shape-w {
+				width: 70px;
+			}
+		}
+	}
+	@include breakpoint(max-xl) {
+		.shape-w-two {
+			width: 90px;
+		}
+	}
+	@include breakpoint(max-lg) {
+		margin-top: 50px;
+	}
+	@include breakpoint(max-sm) {
+		margin-top: 40px;
+	}
 }
-
 
 // What-Toppers Section Starts Here
 .what-toppers {
-    background-color: #F2F3F4;
-    padding-top: 67px;
-    padding-bottom: 60px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    .shapes {
-        .shape1 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-        .shape2 {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-    }
+	background-color: #f2f3f4;
+	padding-top: 67px;
+	padding-bottom: 60px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	.shapes {
+		.shape1 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+		.shape2 {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
 }
 .card-item {
-    padding: 33px 30px;
-    background-color: hsl(var(--white));
-    border-radius: 4px;
-    position: relative;
-    @include breakpoint (max-xl) {
-        padding: 25px 20px;
-    }
-    .quote {
-        position: absolute;
-        bottom: 30px;
-        right: 40px;
-    }
-    &__header {
-        margin-bottom: 22px;
-        @include breakpoint (max-sm) {
-            margin-bottom: 15px;
-        }
-        .content {
-            .name {
-                margin-bottom: 3px;
-                @include breakpoint (max-md) {
-                    font-size: 16px;
-                }
-            }
-        }
-        .ratting {
-            font-size: 20px;
-            line-height: 1;
-            @include breakpoint (max-xxl) {
-                font-size: 18px;
-            }
-            @include breakpoint (max-xl) {
-                font-size: 15px;
-            }
-            span {
-                font-weight: 600;
-                padding-left: 6px;
-            }
-        }
-    }
-    p {
-        font-size: 14px;
-        max-width: 310px;
-        margin-bottom: 0;
-    }
-    .user-wrapper {
-        .thumb {
-            padding-right: 10px;
-        }
-    }
+	padding: 33px 30px;
+	background-color: hsl(var(--white));
+	border-radius: 4px;
+	position: relative;
+	@include breakpoint(max-xl) {
+		padding: 25px 20px;
+	}
+	.quote {
+		position: absolute;
+		bottom: 30px;
+		right: 40px;
+	}
+	&__header {
+		margin-bottom: 22px;
+		@include breakpoint(max-sm) {
+			margin-bottom: 15px;
+		}
+		.content {
+			.name {
+				margin-bottom: 3px;
+				@include breakpoint(max-md) {
+					font-size: 16px;
+				}
+			}
+		}
+		.ratting {
+			font-size: 20px;
+			line-height: 1;
+			@include breakpoint(max-xxl) {
+				font-size: 18px;
+			}
+			@include breakpoint(max-xl) {
+				font-size: 15px;
+			}
+			span {
+				font-weight: 600;
+				padding-left: 6px;
+			}
+		}
+	}
+	p {
+		font-size: 14px;
+		max-width: 310px;
+		margin-bottom: 0;
+	}
+	.user-wrapper {
+		.thumb {
+			padding-right: 10px;
+		}
+	}
 }
 .what-slider {
-    margin-bottom: 95px;
-    margin-inline: -25px;
-    @include breakpoint (xl) {
-        .custom-row-gap {
-            --bs-gutter-x: 50px;
-            --bs-gutter-y: 30px;
-            margin-bottom: 60px;
-        }
-    }
-    @include breakpoint (lg) {
-        .custom-row-gap {
-            --bs-gutter-x: 30px;
-            --bs-gutter-y: 24px;
-            margin-bottom: 40px;
-        }
-    }
-    @include breakpoint (max-lg) {
-        .custom-row-gap {
-            --bs-gutter-y: 24px;
-        }
-    }
-    .single-slide {
-        margin-bottom: 86px;
-        padding-inline: 25px;
-        @include breakpoint (lg) {
-            margin-bottom: 50px;
-        }
-        @include breakpoint (max-md) {
-            margin-bottom: 40px;
-        }
-        @include breakpoint (max-sm) {
-            margin-bottom: 35px;
-        }
-    }
-    .slick-dots {
-        li {
-            background-color: #CECECE;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            &.slick-active {
-                background-color: hsl(var(--base));
-            }
-        }
-    }
-    @include breakpoint (lg) {
-    div[class*="col"]:nth-of-type(3n + 2) {
-    .card-item  { 
-        transform: translateY(60px);
-        @include breakpoint (lg) {
-            transform: translateY(40px);
-            
-        }
-        }
-    }
-    }
+	margin-bottom: 95px;
+	margin-inline: -25px;
+	@include breakpoint(xl) {
+		.custom-row-gap {
+			--bs-gutter-x: 50px;
+			--bs-gutter-y: 30px;
+			margin-bottom: 60px;
+		}
+	}
+	@include breakpoint(lg) {
+		.custom-row-gap {
+			--bs-gutter-x: 30px;
+			--bs-gutter-y: 24px;
+			margin-bottom: 40px;
+		}
+	}
+	@include breakpoint(max-lg) {
+		.custom-row-gap {
+			--bs-gutter-y: 24px;
+		}
+	}
+	.single-slide {
+		margin-bottom: 86px;
+		padding-inline: 25px;
+		@include breakpoint(lg) {
+			margin-bottom: 50px;
+		}
+		@include breakpoint(max-md) {
+			margin-bottom: 40px;
+		}
+		@include breakpoint(max-sm) {
+			margin-bottom: 35px;
+		}
+	}
+	.slick-dots {
+		li {
+			background-color: #cecece;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			&.slick-active {
+				background-color: hsl(var(--base));
+			}
+		}
+	}
+	@include breakpoint(lg) {
+		div[class*="col"]:nth-of-type(3n + 2) {
+			.card-item {
+				transform: translateY(60px);
+				@include breakpoint(lg) {
+					transform: translateY(40px);
+				}
+			}
+		}
+	}
 }
 
 // Benefits-Section Starts Here
 .benefits-item {
-    padding: 59px 30px 40px;
-    background-color: hsl(var(--white));
-    border: 1px solid #E5E5E5;
-    border-radius: 10px;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-between;
-    @include breakpoint (max-xl) {
-        
-    }
-    &__thumb {
-        margin-bottom: 28px;
-        height: 150px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        img {
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    &__title {
-        margin-bottom: 30px;
-        text-align: center;
-    }
+	padding: 59px 30px 40px;
+	background-color: hsl(var(--white));
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: space-between;
+	@include breakpoint(max-xl) {
+	}
+	&__thumb {
+		margin-bottom: 28px;
+		height: 150px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+		text-align: center;
+	}
 }
 .benefits__list {
-    max-width: 330px;
-    margin: 0 auto 65px;
-    li {
-        font-weight: 500;
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-        span {
-            width: 25px;
-            display: block;
-            img {
-                width: 100%;
-            }
-        }
-        p {
-            width: calc(100% - 25px);
-            padding-left: 10px;
-            display: block;
-        }
-    }
+	max-width: 330px;
+	margin: 0 auto 65px;
+	li {
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		span {
+			width: 25px;
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+		p {
+			width: calc(100% - 25px);
+			padding-left: 10px;
+			display: block;
+		}
+	}
 }
 .red-btn {
-    font-size: 20px;
-    line-height: 1;
-    font-weight: 600;
-    color: hsl(var(--base));
-    display: flex;
-    align-items: center;
-    width: 145px;
-    margin: 0 auto;
-    @include breakpoint (max-xxl) {
-        font-size: 18px;
-    }
-    span {
-        font-size: 25px;
-        padding-right: 12px;
-        @include breakpoint (max-xxl) {
-            font-size: 22px;
-        }
-    }
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 600;
+	color: hsl(var(--base));
+	display: flex;
+	align-items: center;
+	width: 145px;
+	margin: 0 auto;
+	@include breakpoint(max-xxl) {
+		font-size: 18px;
+	}
+	span {
+		font-size: 25px;
+		padding-right: 12px;
+		@include breakpoint(max-xxl) {
+			font-size: 22px;
+		}
+	}
 }
 
-// How-Section Starts Here 
+// How-Section Starts Here
 .how-section {
-    background-color: #FCFCFC;
+	background-color: #fcfcfc;
 }
 .how-item {
-    padding: 59px 35px 55px;
-    background-color: hsl(var(--white));
-    border: 1px solid #E5E5E5;
-    border-radius: 4px;
-    height: 100%;
-    box-shadow: 0px 9px 91px rgba(141, 158, 189, 0.12);
-    @include breakpoint (max-xl) {
-        padding: 50px 35px 50px; 
-    }
-    @include breakpoint (max-md) {
-        padding: 50px 25px 40px;
-    }
-    @include breakpoint (max-sm) {
-        padding: 45px 25px 35px;
-    }
-    &__thumb {
-        margin-bottom: 15px;
-        height: 110px;
-        img {
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-    &__title {
-        margin-bottom: 17px;
-    }
-    &__content {
-        font-size: 14px;
-        font-weight: 500;
-        margin: 0 auto 12px;
-        max-width: 232px;
+	padding: 59px 35px 55px;
+	background-color: hsl(var(--white));
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	height: 100%;
+	box-shadow: 0px 9px 91px rgba(141, 158, 189, 0.12);
+	@include breakpoint(max-xl) {
+		padding: 50px 35px 50px;
+	}
+	@include breakpoint(max-md) {
+		padding: 50px 25px 40px;
+	}
+	@include breakpoint(max-sm) {
+		padding: 45px 25px 35px;
+	}
+	&__thumb {
+		margin-bottom: 15px;
+		height: 110px;
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title {
+		margin-bottom: 17px;
+	}
+	&__content {
+		font-size: 14px;
+		font-weight: 500;
+		margin: 0 auto 12px;
+		max-width: 232px;
+	}
+}
+
+// Roadmap Section
+.section-bg {
+	position: absolute;
+	bottom: 100px;
+    width: 90%;
+	left: 50%;
+    transform: translateX(-50%);
+    img {
+        width: 100%;
     }
 }
+.roadmap-slider {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 6px;
+		background-color: hsl(var(--base));
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+	.single-slide {
+		&:nth-child(odd) {
+			.roadmap-item {
+				padding-bottom: 80px;
+				margin-bottom: 180px;
+				&::before {
+					position: absolute;
+					content: "";
+					height: 100px;
+					width: 100px;
+					margin-inline: auto;
+					background: url(../images/shape/r-top.png);
+					bottom: 0;
+					background-repeat: no-repeat;
+					background-size: contain;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		&:nth-child(even) {
+			.roadmap-item {
+				padding-top: 80px;
+				margin-top: 180px;
+				&::before {
+					position: absolute;
+					content: "";
+					height: 100px;
+					width: 100px;
+					margin-inline: auto;
+					background: url(../images/shape/r-bottom.png);
+					top: 0;
+					background-repeat: no-repeat;
+					background-size: contain;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
+.roadmap-item {
+	text-align: center;
+	position: relative;
+	p {
+		color: hsl(var(--dark) / 0.6);
+		font-size: 14px;
+		margin-top: 8px;
+	}
+}
+// Roadmap Section

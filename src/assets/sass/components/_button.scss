@@ -24,6 +24,9 @@
 	}
 	&.btn--md {
 		padding: 10px 30px !important;
+		@include breakpoint(max-sm) {
+			padding-inline: 20px !important;
+		}
 	}
 	&.btn--sm {
 		padding: 5px 15px !important;
