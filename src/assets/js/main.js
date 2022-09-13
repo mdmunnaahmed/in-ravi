@@ -115,6 +115,47 @@ $(".what-slider").slick({
 	],
 });
 
+// Slider Part
+$(".roadmap-slider").slick({
+	fade: false,
+	slidesToShow: 6,
+	slidesToScroll: 1,
+	infinite: true,
+	autoplay: false,
+	pauseOnHover: true,
+	centerMode: false,
+	dots: true,
+	arrows: false,
+	nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
+	prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+	responsive: [
+		{
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 5,
+			},
+		},
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 4,
+			},
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 3,
+			},
+		},
+		{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 2,
+			},
+		},
+	],
+});
+
 // Odometer Counter
 let counter = $(".counter-item");
 if (counter) {

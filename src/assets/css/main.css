@@ -494,6 +494,12 @@ h6 {
     padding: 10px 30px !important;
 }
 
+@media (max-width: 575px) {
+    .btn.btn--md {
+        padding-inline: 20px !important;
+    }
+}
+
 .btn.btn--sm {
     padding: 5px 15px !important;
     font-size: 14px;
@@ -2645,7 +2651,7 @@ input:-webkit-autofill:focus {
 
 .section-header__subtitle {
     font-weight: 600;
-    color: #6D6B72;
+    color: #6d6b72;
 }
 
 @media (max-width: 1399px) {
@@ -2693,7 +2699,7 @@ input:-webkit-autofill:focus {
 
 .section-header__content {
     font-size: 24px;
-    color: #6D6B72;
+    color: #6d6b72;
 }
 
 @media (max-width: 1399px) {
@@ -2774,7 +2780,7 @@ input:-webkit-autofill:focus {
     line-height: 1;
     font-size: 24px;
     font-weight: 600;
-    color: #56545C;
+    color: #56545c;
 }
 
 @media (max-width: 1399px) {
@@ -2825,7 +2831,7 @@ input:-webkit-autofill:focus {
 }
 
 .what-toppers {
-    background-color: #F2F3F4;
+    background-color: #f2f3f4;
     padding-top: 67px;
     padding-bottom: 60px;
     position: relative;
@@ -2971,7 +2977,7 @@ input:-webkit-autofill:focus {
 }
 
 .what-slider .slick-dots li {
-    background-color: #CECECE;
+    background-color: #cecece;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -2996,7 +3002,7 @@ input:-webkit-autofill:focus {
 .benefits-item {
     padding: 59px 30px 40px;
     background-color: hsl(var(--white));
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     border-radius: 10px;
     height: 100%;
     display: flex;
@@ -3080,13 +3086,13 @@ input:-webkit-autofill:focus {
 }
 
 .how-section {
-    background-color: #FCFCFC;
+    background-color: #fcfcfc;
 }
 
 .how-item {
     padding: 59px 35px 55px;
     background-color: hsl(var(--white));
-    border: 1px solid #E5E5E5;
+    border: 1px solid #e5e5e5;
     border-radius: 4px;
     height: 100%;
     box-shadow: 0px 9px 91px rgba(141, 158, 189, 0.12);
@@ -3129,6 +3135,82 @@ input:-webkit-autofill:focus {
     font-weight: 500;
     margin: 0 auto 12px;
     max-width: 232px;
+}
+
+.section-bg {
+    position: absolute;
+    bottom: 100px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-bg img {
+    width: 100%;
+}
+
+.roadmap-slider {
+    position: relative;
+}
+
+.roadmap-slider::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    background-color: hsl(var(--base));
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.roadmap-slider .single-slide:nth-child(odd) .roadmap-item {
+    padding-bottom: 80px;
+    margin-bottom: 180px;
+}
+
+.roadmap-slider .single-slide:nth-child(odd) .roadmap-item::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    margin-inline: auto;
+    background: url(../images/shape/r-top.png);
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.roadmap-slider .single-slide:nth-child(even) .roadmap-item {
+    padding-top: 80px;
+    margin-top: 180px;
+}
+
+.roadmap-slider .single-slide:nth-child(even) .roadmap-item::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 100px;
+    margin-inline: auto;
+    background: url(../images/shape/r-bottom.png);
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.roadmap-item {
+    text-align: center;
+    position: relative;
+}
+
+.roadmap-item p {
+    color: hsl(var(--dark)/0.6);
+    font-size: 14px;
+    margin-top: 8px;
 }
 
 .exam-top {
