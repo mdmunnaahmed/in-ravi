@@ -386,12 +386,12 @@
 .section-bg {
 	position: absolute;
 	bottom: 100px;
-    width: 90%;
+	width: 90%;
 	left: 50%;
-    transform: translateX(-50%);
-    img {
-        width: 100%;
-    }
+	transform: translateX(-50%);
+	img {
+		width: 100%;
+	}
 }
 .roadmap-slider {
 	position: relative;
@@ -456,3 +456,210 @@
 	}
 }
 // Roadmap Section
+
+// Exam-Section Starts Here
+.exam-top {
+	margin-bottom: 50px;
+	.title {
+		margin-bottom: 25px;
+		font-size: 40px;
+		@include breakpoint(max-xl) {
+			font-size: 35px;
+		}
+		@include breakpoint(max-lg) {
+			font-size: 32px;
+			margin-bottom: 40px;
+		}
+		@include breakpoint(max-sm) {
+			font-size: 24px;
+			margin-bottom: -7px;
+		}
+		span {
+			color: #656565;
+		}
+	}
+}
+.d-none {
+	display: none;
+}
+/* Make circles that indicate the steps of the form: */
+.step {
+	height: 10px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: hsl(var(--base));
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.11;
+	&.finish {
+		background-color: hsl(var(--base));
+		opacity: 1;
+	}
+}
+
+.step.active {
+	opacity: 1;
+}
+.exam-section {
+	padding-top: 50px;
+	padding-bottom: 200px;
+	position: relative;
+	z-index: 1;
+	@include breakpoint(max-xl) {
+		padding-bottom: 100px;
+		padding-top: 40px;
+	}
+	@include breakpoint(max-sm) {
+		padding-bottom: 70px;
+		padding-top: 10px;
+	}
+}
+.exam-shapes {
+	.shape1 {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		bottom: 0;
+	}
+	.shape2 {
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		bottom: 0;
+	}
+}
+.eaxm-wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	.exam-item {
+		padding: 20px 20px 30px;
+		border-radius: 11px;
+		border: 1px solid hsl(var(--border));
+		background-color: hsl(var(--white));
+		.text {
+			@include breakpoint(max-xl) {
+				margin-bottom: 10px;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		.title {
+			margin-bottom: 20px;
+			@include breakpoint(max-sm) {
+				margin-bottom: 15px;
+			}
+		}
+		.exam-select {
+			gap: 0 55px;
+			@include breakpoint(max-xl) {
+				gap: 0 45px;
+			}
+			@include breakpoint(max-lg) {
+				gap: 0px 30px;
+			}
+			@include breakpoint(max-sm) {
+				gap: 5px 20px;
+			}
+			.form-group {
+				display: flex;
+				align-items: center;
+			}
+			input {
+				padding-inline: 5px;
+				width: 17.5px;
+				height: 17.5px;
+				@include breakpoint(max-xl) {
+					padding: 0;
+				}
+				@include breakpoint(max-lg) {
+					width: 15px;
+					height: 15px;
+				}
+			}
+			label {
+				font-family: "Inter", sans-serif;
+				font-size: 20px;
+				line-height: 1;
+				padding-left: 20px;
+				@include breakpoint(max-xl) {
+					font-size: 18px;
+					padding-left: 15px;
+				}
+				@include breakpoint(max-lg) {
+					padding-left: 10px;
+					font-size: 16px;
+				}
+				@include breakpoint(max-sm) {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+}
+.progress-exam {
+	position: absolute;
+	left: 50%;
+	top: -80px;
+	transform: translateX(-50%);
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	margin-inline: 0;
+	padding: 0;
+	@include breakpoint(max-lg) {
+		top: -75px;
+	}
+	.step {
+		border-radius: 0;
+		margin-inline: 0;
+		width: 100px;
+		@include breakpoint(max-lg) {
+			width: 70px;
+		}
+		@include breakpoint(max-sm) {
+			width: 50px;
+		}
+	}
+}
+.next-pre-wrapper {
+	gap: 20px;
+	margin-top: 18px;
+	.btn-modal {
+		width: 210px;
+		height: 52px;
+		line-height: 52px;
+		padding: 0;
+		@include breakpoint(max-sm) {
+			width: 100px;
+			height: 42px;
+			line-height: 42px;
+		}
+	}
+}
+.download-wrapper {
+	gap: 10px;
+	padding-left: 20px;
+	margin-bottom: 10px;
+	.thumb {
+		position: relative;
+	}
+}
+.icon-wrapper {
+	position: absolute;
+	right: 8px;
+	top: 7px;
+	gap: 6px;
+	li {
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		border-radius: 4px;
+		text-align: center;
+		font-size: 14px;
+		background-color: hsl(var(--white));
+		cursor: pointer;
+	}
+}

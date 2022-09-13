@@ -1,4 +1,4 @@
-.btn {
+.btn{
 	padding: 19px 64px;
 	font-weight: 600;
 	outline: none !important;
@@ -78,4 +78,25 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 		padding-inline: 50px;
 
 	}
+}
+.btn--base {
+	&.active {
+		background-color: transparent;
+		color: hsl(var(--base));
+		border-color: hsl(var(--base));
+		&:hover {
+			background-color: hsl(var(--base));
+			color: hsl(var(--white));
+		}
+	}
+}
+.btn-modal {
+	padding: 12px;
+	font-size: 16px;
+}
+.modal-btn-close {
+	border: 1px solid hsl(var(--border));
+	font-size: 14px;
+	right: 30px;
+	position: absolute;
 }
