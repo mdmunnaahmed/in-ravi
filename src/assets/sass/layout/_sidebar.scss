@@ -25,8 +25,18 @@
 		top: 10px;
 	}
 }
+.sidebar-toggler {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	@include breakpoint (max-sm) {
+		top: 10px;
+		right: 15px;
+	}
+}
 .sidebar-top {
 	margin-bottom: 55px;
+	position: relative;
 	@include breakpoint(max-lg) {
 		margin-bottom: 30px;
 	}
@@ -89,6 +99,9 @@
 	}
 }
 .header-left {
+	@include breakpoint (max-xxl) {
+		margin-bottom: 20px;
+	} 
 	.icon {
 		cursor: pointer;
 	}
@@ -117,9 +130,16 @@
 		width: 192px;
 		display: flex;
 		flex-wrap: wrap;
-
+		@include breakpoint (max-sm) {
+			width: 110px;
+			padding: 5px 8px;
+		}
 		.thumb {
 			width: 40px;
+			@include breakpoint (max-sm) {
+				width: 30px;
+				margin-bottom: 2px;
+			}
 			img {
 				width: 100%;
 			}
@@ -127,16 +147,41 @@
 		.content {
 			width: calc(100% - 40px);
 			padding-left: 10px;
+			@include breakpoint (max-sm) {
+				width: 100%;			
+				padding-left: 0 !important;
+			}
+			.title {
+				@include breakpoint (max-sm) {
+					font-size: 16px;
+				}
+			}
 			p {
 				font-size: 16px;
 				font-weight: 500;
 				color: hsl(var(--body));
+				@include breakpoint (max-xl) {
+					font-size: 14px;
+				}
+				@include breakpoint (max-sm) {
+					font-size: 12px;
+				}
 			}
 		}
 	}
 }
 .tab-task {
-	gap: 20px;
+	gap: 10px 20px;
+	@include breakpoint (max-sm) {
+		gap: 7px;
+	}
+	li {
+		a {
+			@include breakpoint (max-lg) {
+				padding: 0;
+			}
+		}
+	}
 }
 .bottom-content {
 	background-color: #edf0f3;
@@ -160,6 +205,14 @@
 	}
 	.content-right {
 		margin: 0 -10px;
+		li {
+			a {
+				color: hsl(var(--body));
+				&.active {
+					color: hsl(var(--base));
+				}
+			}
+		}
 		span {
 			padding: 0 5px;
 			cursor: pointer;
@@ -192,47 +245,60 @@
 .faq-wrapper {
 	width: 50%;
 	padding: 10px;
+	@include breakpoint (max-lg) {
+		width: 100%;
+	}
 	.faq-item {
 		background-color: hsl(var(--white));
 		padding: 10px 20px;
 		border-radius: 10px;
+		@include breakpoint (max-xxl) {
+			padding: 10px;
+		}
 		&__header {
 			padding: 5px 0;
 			cursor: pointer;
-			margin-bottom: 12px;
 			.title {
 				font-weight: 600;
 				font-size: 20px;
 				color: #707377;
+				@include breakpoint (max-xxl) {
+					font-size: 18px;
+				}
 				span {
 					font-size: 36px;
 					font-weight: 700;
 					color: hsl(var(--heading));
+					@include breakpoint (max-xxl) {
+						font-size: 28px;
+					}
 				}
 			}
 			.progress-custom {
 				height: 40px;
 				width: 95px;
 				border-radius: 25px;
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				font-size: 20px;
 				font-weight: 600;
-				&.style-two {
-					position: relative;
-					z-index: 1;
-					&::before {
-						position: absolute;
-						content: "";
-						left: 0;
-						top: 0;
-						bottom: 0;
-						width: 60%;
-						background-color: #106fdf;
-						z-index: -1;
-					}
+				text-align: center;
+				position: relative;
+				.percentage {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					color: hsl(var(--white));
+				}
+				.progress-bar {
+					height: 100% !important;
+				}
+			}
+		}
+		&__content {
+			.video-content {
+				&:first-child {
+					margin-top: 10px;
+
 				}
 			}
 		}
@@ -243,14 +309,26 @@
 	border-top: 1px solid hsl(var(--border));
 	border-top: 1px solid hsl(var(--border));
 	position: relative;
-	.title {
-		margin-bottom: 10px;
+	.left {	
+		.title {
+			margin-bottom: 10px;
+			max-width: 600px;
+			display: block;
+			@include breakpoint (max-xxl) {
+				max-width: 450px;
+				font-size: 16px;
+			}
+		}
 	}
+		
 	.content {
 		width: calc(100% - 22px);
 		padding-right: 20px;
 		&.list-pl {
 			padding-left: 20px;
+			@include breakpoint (max-xl) {
+				font-size: 14px;
+			}
 		}
 		li {
 			list-style: disc;
@@ -279,5 +357,20 @@
 		height: 20px;
 		border: 2px solid #949595;
 		border-radius: 2px;
+	}
+}
+
+// Test-Modal Starts Here 
+.popup-wrapper {
+	max-width: 415px;
+    padding: 80px 32px;
+    border-radius: 4px;
+    background-color: hsl(var(--white));
+	position: relative;
+	@include breakpoint (max-xxl) {
+		padding: 50px 30px;
+	}
+	@include breakpoint (max-lg) {
+		padding: 30px;
 	}
 }
