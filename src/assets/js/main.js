@@ -262,3 +262,15 @@ function fixStepIndicator(n) {
 	//... and adds the "active" class on the current step:
 	x[n].className += " active";
 }
+
+
+var progressBarOptions = {
+	startAngle: -1.55,
+	size: 200,
+	value: 0.75,
+	fill: {
+		color: "#ffa500",
+	},
+};
+
+$('.circlechart').circlechart(); // Initialization

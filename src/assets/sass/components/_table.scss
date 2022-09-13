@@ -6,13 +6,15 @@
 	thead {
 		tr {
 			th {
-				background: hsl(var(--base));
+				background: #F8F8FA;
 				text-align: center;
-				font-size: 15px;
-				padding: 15px;
-				color: hsl(var(--white));
+				font-size: 16px;
+				padding-inline: 15px;
+				color: #84838A;
 				font-family: var(--heading-font);
 				font-weight: 500;
+				height: 59px;
+				line-height: 59px;
 				&:first-child {
 					text-align: left;
 					border-radius: 5px 0 0 0;
@@ -31,8 +33,10 @@
 				text-align: center;
 				vertical-align: middle;
 				padding: 20px 15px;
-				border-width: 1px;
+				border-width: 0px;
 				font-family: var(--heading-font);
+				color: #0D0A16;
+				height: 69px;
 				&::before {
 					content: attr(data-label);
 					font-family: var(--heading-font);
@@ -48,8 +52,11 @@
 					text-align: right;
 				}
 			}
+			&:nth-child(odd) {
+				background: #F1F4F6;
+			}
 			&:nth-child(even) {
-				background: hsl(var(--light));
+				background: #FCFCFC;
 			}
 		}
 	}
@@ -76,7 +83,7 @@
 					text-align: right;
 					padding: 10px 15px;
 					border: none;
-					border-bottom: 1px solid hsl(var(--border));
+					border-bottom: none;
 					@include breakpoint(max-lg) {
 						font-size: 14px !important;
 					}
