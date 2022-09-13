@@ -131,7 +131,7 @@ if (counter) {
 }
 
 //Faq Click Event
-$(".faq-item__title").on("click", function (e) {
+$(".faq-item__header").on("click", function (e) {
 	var element = $(this).parent(".faq-item");
 	if (element.hasClass("open")) {
 		element.removeClass("open");
@@ -160,4 +160,21 @@ $(".menu li a").each(function () {
 	if ($(this).attr("href").indexOf(current) !== -1 && current != "") {
 		$(this).addClass("active");
 	}
+});
+
+if ($(".datepicker-here-top-orientation")) {
+	$(".datepicker-here-top-orientation").datepicker({
+		orientation: "bottom",
+		autoclose: true,
+	});
+}
+
+$(".sidebar-toggler").on("click", function () {
+	$(".sidebar").toggleClass("active");
+	$(".overlay").toggleClass("overlay-color");
+});
+
+$(".overlay, .sidebar-close").on("click", function () {
+	$(".sidebar").removeClass("active");
+	$(".overlay").removeClass("overlay-color");
 });

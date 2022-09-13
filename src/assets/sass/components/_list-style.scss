@@ -34,6 +34,20 @@
 			}
 		}
 	}
+	&.list-number {
+		list-style: decimal;
+		padding-left: 15px;
+		li {
+			padding: 2px 0;
+		}
+	}
+	&.list-disc {
+		list-style: disc;
+		margin-left: 15px;
+		li {
+			padding: 2px 0;
+		}
+	}
 	&.list-style-two {
 		li {
 			padding: 6px 0;
