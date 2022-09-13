@@ -1,0 +1,60 @@
+<!-- meta tags and other links -->
+@@include('../partial-html/_template-top.html')
+<link rel="stylesheet" href="https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/progresscircle.css">
+<script src="view-source:https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/"></script>
+
+<!-- Dashborad Starts Here  -->
+<div class="dashborad">
+    <div class="main-content d-flex flex-wrap">
+        @@include('../partial-html/_sidebar.html')
+        <div class="body-content">
+            <div class="header-top d-flex flex-wrap justify-content-between align-items-center">
+            <div class="header-left">
+                <div class="icon"><i class="las la-arrow-left"></i></div>
+                <div class="dashboard-date d-flex flex-wrap align-items-center">
+                    <h3>Gantt chart</h3>
+                </div>
+                <p class="mb-0">Jan 2022</p>
+            </div>
+            <span class="sidebar-toggler d-lg-none"><i class="fas fa-bars"></i></span>
+            </div>
+            <div class="bottom-content">
+                <table class="table chart-table">
+                    <thead>
+                        <tr>
+                            <th>Subjects</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Economincs</td>
+                            <td>9 days</td>
+                            <td>45%</td>
+                        </tr>
+                        <tr>
+                            <td>Economincs</td>
+                            <td>9 days</td>
+                            <td>45%</td>
+                            <td>
+                                <div id="demo">
+                                    <div class="circlechart" data-percentage="85">.Net</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Dashborad Ends Here  -->
+
+
+@@include('../partial-html/_template-bottom.html')
+<script src="jQuery-plugin-progressbar.js"></script>
+</body>
+
+</html>

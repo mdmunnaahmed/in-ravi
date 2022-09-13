@@ -26,8 +26,8 @@
 <body>
     <!-- Overlay -->
     <div class="overlay"></div>
-
-
+<link rel="stylesheet" href="https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/progresscircle.css">
+<script src="view-source:https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/"></script>
 
 <!-- Dashborad Starts Here  -->
 <div class="dashborad">
@@ -62,20 +62,45 @@
             <div class="header-left">
                 <div class="icon"><i class="las la-arrow-left"></i></div>
                 <div class="dashboard-date d-flex flex-wrap align-items-center">
-                    <h3>Test</h3>
+                    <h3>Gantt chart</h3>
                 </div>
                 <p class="mb-0">Jan 2022</p>
             </div>
             <span class="sidebar-toggler d-lg-none"><i class="fas fa-bars"></i></span>
             </div>
             <div class="bottom-content">
-
+                <table class="table chart-table">
+                    <thead>
+                        <tr>
+                            <th>Subjects</th>
+                            <th>Duration</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Economincs</td>
+                            <td>9 days</td>
+                            <td>45%</td>
+                        </tr>
+                        <tr>
+                            <td>Economincs</td>
+                            <td>9 days</td>
+                            <td>45%</td>
+                            <td>
+                                <div id="demo">
+                                    <div class="circlechart" data-percentage="85">.Net</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
 <!-- Dashborad Ends Here  -->
-
 
 
 <!-- jQuery library -->
@@ -92,5 +117,7 @@
 
 <!-- Main js -->
 <script src="assets/js/main.js"></script>
+<script src="jQuery-plugin-progressbar.js"></script>
 </body>
+
 </html>
