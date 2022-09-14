@@ -327,7 +327,7 @@
 	.content {
 		width: calc(100% - 22px);
 		padding-right: 20px;
-		@include breakpoint (max-sm) {
+		@include breakpoint(max-sm) {
 			max-width: 330px;
 			display: block;
 			word-break: break-all;
@@ -387,8 +387,7 @@
 .chart-table {
 	max-width: 420px;
 	width: 100%;
-	.chart-table
-	&.table {
+	.chart-table &.table {
 		td {
 			padding: 0px 15px !important;
 		}
@@ -398,7 +397,7 @@
 		height: 18px;
 	}
 }
-.table>:not(caption)>*>* {
+.table > :not(caption) > * > * {
 	padding-top: 1px;
 	padding-bottom: 1px;
 }

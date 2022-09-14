@@ -208,7 +208,6 @@ $(".sidebar li a").each(function () {
 	}
 });
 
-
 if ($(".datepicker-here-top-orientation")) {
 	$(".datepicker-here-top-orientation").datepicker();
 }
