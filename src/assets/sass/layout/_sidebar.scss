@@ -29,7 +29,7 @@
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	@include breakpoint (max-sm) {
+	@include breakpoint(max-sm) {
 		top: 10px;
 		right: 15px;
 	}
@@ -76,6 +76,8 @@
 .body-content {
 	width: calc(100% - 250px);
 	margin-left: auto;
+	background-color: #edf0f3;
+	min-height: 100vh;
 	@include breakpoint(max-lg) {
 		width: 100%;
 	}
@@ -99,9 +101,9 @@
 	}
 }
 .header-left {
-	@include breakpoint (max-xxl) {
+	@include breakpoint(max-xxl) {
 		margin-bottom: 20px;
-	} 
+	}
 	.icon {
 		cursor: pointer;
 	}
@@ -130,13 +132,13 @@
 		width: 192px;
 		display: flex;
 		flex-wrap: wrap;
-		@include breakpoint (max-sm) {
+		@include breakpoint(max-sm) {
 			width: 110px;
 			padding: 5px 8px;
 		}
 		.thumb {
 			width: 40px;
-			@include breakpoint (max-sm) {
+			@include breakpoint(max-sm) {
 				width: 30px;
 				margin-bottom: 2px;
 			}
@@ -147,12 +149,12 @@
 		.content {
 			width: calc(100% - 40px);
 			padding-left: 10px;
-			@include breakpoint (max-sm) {
-				width: 100%;			
+			@include breakpoint(max-sm) {
+				width: 100%;
 				padding-left: 0 !important;
 			}
 			.title {
-				@include breakpoint (max-sm) {
+				@include breakpoint(max-sm) {
 					font-size: 16px;
 				}
 			}
@@ -160,10 +162,10 @@
 				font-size: 16px;
 				font-weight: 500;
 				color: hsl(var(--body));
-				@include breakpoint (max-xl) {
+				@include breakpoint(max-xl) {
 					font-size: 14px;
 				}
-				@include breakpoint (max-sm) {
+				@include breakpoint(max-sm) {
 					font-size: 12px;
 				}
 			}
@@ -172,21 +174,23 @@
 }
 .tab-task {
 	gap: 10px 20px;
-	@include breakpoint (max-sm) {
+	@include breakpoint(max-sm) {
 		gap: 7px;
 	}
 	li {
 		a {
-			@include breakpoint (max-lg) {
+			@include breakpoint(max-lg) {
 				padding: 0;
 			}
 		}
 	}
 }
 .bottom-content {
-	background-color: #edf0f3;
 	overflow: hidden;
-	height: 100%;
+	overflow-y: auto;
+	&.text-body-content {
+		margin-bottom: 82px;
+	}
 }
 .content-top {
 	margin-bottom: 20px;
@@ -245,14 +249,14 @@
 .faq-wrapper {
 	width: 50%;
 	padding: 10px;
-	@include breakpoint (max-lg) {
+	@include breakpoint(max-lg) {
 		width: 100%;
 	}
 	.faq-item {
 		background-color: hsl(var(--white));
 		padding: 10px 20px;
 		border-radius: 10px;
-		@include breakpoint (max-xxl) {
+		@include breakpoint(max-xxl) {
 			padding: 10px;
 		}
 		&__header {
@@ -262,14 +266,14 @@
 				font-weight: 600;
 				font-size: 20px;
 				color: #707377;
-				@include breakpoint (max-xxl) {
+				@include breakpoint(max-xxl) {
 					font-size: 18px;
 				}
 				span {
 					font-size: 36px;
 					font-weight: 700;
 					color: hsl(var(--heading));
-					@include breakpoint (max-xxl) {
+					@include breakpoint(max-xxl) {
 						font-size: 28px;
 					}
 				}
@@ -298,7 +302,6 @@
 			.video-content {
 				&:first-child {
 					margin-top: 10px;
-
 				}
 			}
 		}
@@ -309,24 +312,24 @@
 	border-top: 1px solid hsl(var(--border));
 	border-top: 1px solid hsl(var(--border));
 	position: relative;
-	.left {	
+	.left {
 		.title {
 			margin-bottom: 10px;
 			max-width: 600px;
 			display: block;
-			@include breakpoint (max-xxl) {
+			@include breakpoint(max-xxl) {
 				max-width: 450px;
 				font-size: 16px;
 			}
 		}
 	}
-		
+
 	.content {
 		width: calc(100% - 22px);
 		padding-right: 20px;
 		&.list-pl {
 			padding-left: 20px;
-			@include breakpoint (max-xl) {
+			@include breakpoint(max-xl) {
 				font-size: 14px;
 			}
 		}
@@ -360,23 +363,23 @@
 	}
 }
 
-// Test-Modal Starts Here 
+// Test-Modal Starts Here
 .popup-wrapper {
 	max-width: 415px;
-    padding: 80px 32px;
-    border-radius: 4px;
-    background-color: hsl(var(--white));
+	padding: 80px 32px;
+	border-radius: 4px;
+	background-color: hsl(var(--white));
 	position: relative;
-	@include breakpoint (max-xxl) {
+	@include breakpoint(max-xxl) {
 		padding: 50px 30px;
 	}
-	@include breakpoint (max-lg) {
+	@include breakpoint(max-lg) {
 		padding: 30px;
 	}
 }
 
 // chart-table
 .chart-table {
-	width: 420px;
-
+	max-width: 420px;
+	width: 100%;
 }

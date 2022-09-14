@@ -1990,6 +1990,8 @@ input:-webkit-autofill:focus {
 .body-content {
     width: calc(100% - 250px);
     margin-left: auto;
+    background-color: #edf0f3;
+    min-height: 100vh;
 }
 
 @media (max-width: 991px) {
@@ -2139,9 +2141,12 @@ input:-webkit-autofill:focus {
 }
 
 .bottom-content {
-    background-color: #edf0f3;
     overflow: hidden;
-    height: 100%;
+    overflow-y: auto;
+}
+
+.bottom-content.text-body-content {
+    margin-bottom: 82px;
 }
 
 .content-top {
@@ -2371,7 +2376,8 @@ input:-webkit-autofill:focus {
 }
 
 .chart-table {
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
 }
 
 /* Hide all steps by default: */
