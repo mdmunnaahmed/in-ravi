@@ -32,11 +32,11 @@
 			td {
 				text-align: center;
 				vertical-align: middle;
-				padding: 20px 15px;
+				padding: 0px 15px;
 				border-width: 0px;
 				font-family: var(--heading-font);
 				color: #0D0A16;
-				height: 69px;
+				height: 59px;
 				&::before {
 					content: attr(data-label);
 					font-family: var(--heading-font);

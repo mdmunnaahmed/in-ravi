@@ -960,11 +960,11 @@ h6 {
 .table tbody tr td {
     text-align: center;
     vertical-align: middle;
-    padding: 20px 15px;
+    padding: 0px 15px;
     border-width: 0px;
     font-family: var(--heading-font);
     color: #0D0A16;
-    height: 69px;
+    height: 59px;
 }
 
 .table tbody tr td::before {
@@ -1747,6 +1747,72 @@ input:-webkit-autofill:focus {
     }
 }
 
+.right-user-info {
+    gap: 20px;
+}
+
+.right-user-info .notification {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    text-align: center;
+    line-height: 34px;
+    position: relative;
+}
+
+.right-user-info .notification::before {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FF3232;
+    outline: solid 3px hsl(var(--white));
+}
+
+.right-user-info .user-thumb {
+    width: 34px;
+    height: 34px;
+}
+
+.right-user-info .user-thumb img {
+    width: 100%;
+}
+
+.right-user-info .user-content {
+    padding-right: 13px;
+}
+
+.right-user-info .user-content .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.right-user-info .user-content p {
+    position: relative;
+    text-align: right;
+}
+
+.right-user-info .user-content .active {
+    color: #6A7180;
+    font-size: 14px;
+}
+
+.right-user-info .user-content .active::before {
+    position: absolute;
+    content: "";
+    left: 35px;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #2CCAA9;
+}
+
 .footer-section {
     overflow: hidden;
 }
@@ -1994,6 +2060,8 @@ input:-webkit-autofill:focus {
 .body-content {
     width: calc(100% - 250px);
     margin-left: auto;
+    background-color: #edf0f3;
+    min-height: 100vh;
 }
 
 @media (max-width: 991px) {
@@ -2143,9 +2211,12 @@ input:-webkit-autofill:focus {
 }
 
 .bottom-content {
-    background-color: #edf0f3;
     overflow: hidden;
-    height: 100%;
+    overflow-y: auto;
+}
+
+.bottom-content.text-body-content {
+    margin-bottom: 82px;
 }
 
 .content-top {
@@ -2310,6 +2381,14 @@ input:-webkit-autofill:focus {
     padding-right: 20px;
 }
 
+@media (max-width: 575px) {
+    .video-content .content {
+        max-width: 330px;
+        display: block;
+        word-break: break-all;
+    }
+}
+
 .video-content .content.list-pl {
     padding-left: 20px;
 }
@@ -2375,7 +2454,30 @@ input:-webkit-autofill:focus {
 }
 
 .chart-table {
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
+}
+
+.chart-table .chart-table.table td {
+    padding: 0px 15px !important;
+}
+
+.chart-table .circle-chart {
+    width: 18px;
+    height: 18px;
+}
+
+.table > :not(caption) > * > * {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.shape-thumb {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left: 0;
+    right: 0;
 }
 
 /* Hide all steps by default: */
@@ -2742,6 +2844,16 @@ input:-webkit-autofill:focus {
     .learning-left {
         margin-top: 122px;
     }
+}
+
+.learning-left .section-header__title {
+    position: relative;
+}
+
+.learning-left .section-header__title .shape {
+    position: absolute;
+    right: 130px;
+    bottom: -22px;
 }
 
 .learning-item {
@@ -3153,8 +3265,20 @@ input:-webkit-autofill:focus {
     width: 100%;
 }
 
+.dashborad-roadmap {
+    padding-top: 227px;
+    overflow: hidden;
+}
+
+@media (max-width: 1399px) {
+    .dashborad-roadmap {
+        padding-top: 50px;
+    }
+}
+
 .roadmap-slider {
     position: relative;
+    z-index: 2;
 }
 
 .roadmap-slider::before {

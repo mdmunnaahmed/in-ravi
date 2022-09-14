@@ -54,17 +54,26 @@
 		margin-bottom: 40px;
 	}
 	@include breakpoint(max-sm) {
-		margin-bottom: 30px;
+		margin-bottom: 30px;  
 	}
 	&__title {
 		line-height: 1;
 	}
 }
 
+
 // Learning-Section Starts Here
 .learning-left {
 	@include breakpoint(lg) {
 		margin-top: 122px;
+	}
+	.section-header__title {
+		position: relative;
+		.shape {
+			position: absolute;
+			right: 130px;
+			bottom: -22px;
+		}
 	}
 }
 .learning-item {
@@ -393,8 +402,16 @@
 		width: 100%;
 	}
 }
+.dashborad-roadmap {
+	padding-top: 227px;
+	overflow: hidden;
+	@include breakpoint (max-xxl) {
+		padding-top: 50px;
+	}
+}
 .roadmap-slider {
 	position: relative;
+	z-index: 2;
 	&::before {
 		position: absolute;
 		content: "";
@@ -567,7 +584,7 @@
 				display: flex;
 				align-items: center;
 			}
-			
+
 			input {
 				padding-inline: 5px;
 				width: 17.5px;

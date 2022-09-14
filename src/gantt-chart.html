@@ -26,8 +26,7 @@
 <body>
     <!-- Overlay -->
     <div class="overlay"></div>
-<link rel="stylesheet" href="https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/progresscircle.css">
-<script src="view-source:https://www.jqueryscript.net/demo/jQuery-Plugin-SVG-Progress-Circle/"></script>
+<link rel="stylesheet" href="assets/css/lib/progress.css">
 
 <!-- Dashborad Starts Here  -->
 <div class="dashborad">
@@ -38,7 +37,7 @@
         <p class="mb-0">Strategyzer</p>
     </div>
     <ul class="sidebar-menu">
-        <li><a href="dashboard.html" class="active"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        <li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Dashboard</a></li>
         <li><a href="test.html"><i class="las la-book-open"></i>Test</a></li>
         <li><a href=""><i class="las la-award"></i>Progress</a></li>
         <li><a href="gantt-chart.html"><i class="las la-chart-bar"></i>Gantt chart</a></li>
@@ -57,16 +56,16 @@
     </div>
     <span class="sidebar-close fs--18px d-lg-none"><i class="las la-times"></i></span>
 </div>
-        <div class="body-content">
+        <div class="body-content min-vh-100">
             <div class="header-top d-flex flex-wrap justify-content-between align-items-center">
-            <div class="header-left">
-                <div class="icon"><i class="las la-arrow-left"></i></div>
-                <div class="dashboard-date d-flex flex-wrap align-items-center">
-                    <h3>Gantt chart</h3>
+                <div class="header-left">
+                    <div class="icon"><i class="las la-arrow-left"></i></div>
+                    <div class="dashboard-date d-flex flex-wrap align-items-center">
+                        <h3>Gantt chart</h3>
+                    </div>
+                    <p class="mb-0">Jan 2022</p>
                 </div>
-                <p class="mb-0">Jan 2022</p>
-            </div>
-            <span class="sidebar-toggler d-lg-none"><i class="fas fa-bars"></i></span>
+                <span class="sidebar-toggler d-lg-none"><i class="fas fa-bars"></i></span>
             </div>
             <div class="bottom-content">
                 <table class="table chart-table">
@@ -83,15 +82,80 @@
                             <td>Economincs</td>
                             <td>9 days</td>
                             <td>45%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="65"></div>
+                            </td>
                         </tr>
                         <tr>
                             <td>Economincs</td>
-                            <td>9 days</td>
-                            <td>45%</td>
+                            <td>6 days</td>
+                            <td>23%</td>
                             <td>
-                                <div id="demo">
-                                    <div class="circlechart" data-percentage="85">.Net</div>
-                                </div>
+                                <div class="circlechart" data-percentage="50"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Polity PPQ</td>
+                            <td>3 days</td>
+                            <td>0%</td>
+                            <td>
+                                <div class="circlechart" data-percentage=""></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Geography GPQ</td>
+                            <td>6 days</td>
+                            <td>30%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="40"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Science tech</td>
+                            <td>4 days</td>
+                            <td>0%</td>
+                            <td>
+                                <div class="circlechart" data-percentage=""></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>History</td>
+                            <td>7 days</td>
+                            <td>27%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="40"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Essay & Answer-Writing</td>
+                            <td>8 days</td>
+                            <td>0%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="0"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ethics</td>
+                            <td>9 days</td>
+                            <td>75%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="75"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Optional Subject</td>
+                            <td>5 days</td>
+                            <td>76%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="76"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CSAT</td>
+                            <td>2 days</td>
+                            <td>86%</td>
+                            <td>
+                                <div class="circlechart" data-percentage="65"></div>
                             </td>
                         </tr>
                     </tbody>
@@ -117,7 +181,10 @@
 
 <!-- Main js -->
 <script src="assets/js/main.js"></script>
-<script src="jQuery-plugin-progressbar.js"></script>
+<script src="assets/js/lib/progress.js"></script>
+<script>
+    $('.circlechart').circlechart(); // Initialization
+</script>
 </body>
 
 </html>
