@@ -140,6 +140,19 @@
 .account-form {
 	.form-group {
 		position: relative;
+		.icon {
+			position: absolute;
+			padding: 4px;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 26px;
+			background-color: hsl(var(--white));
+			color: #CCCCCC;
+			font-size: 18px;
+			@include breakpoint (max-sm) {
+				right: 20px;
+			}
+		}
 	}
 	.form-label {
 		position: absolute;
@@ -151,10 +164,15 @@
 		transform: translateY(-50%);
 		@extend %transition;
 		color: hsl(var(--dark) / 0.4);
-	}
+		font-size: 16px;
+	}      
 	.form--control {
 		height: 64px;
 		margin-top: 5px;
+		padding-inline: 22px;
+		@include breakpoint (max-sm) {
+			height: 60px;
+		}
 		&::-webkit-input-placeholder {
 			color: hsl(var(--dark) / 0.4);
 		}
@@ -164,6 +182,22 @@
 	}
 	.btn {
 		margin-top: 20px;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		@include breakpoint (max-sm) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+}
+.sign-in {
+	.form--control {
+		padding-right: 60px;
+		@include breakpoint (max-sm) {
+			padding-inline: 15px;
+			padding-right: 50px;
+			height: 60px;
+		}
 	}
 }
 // Account Section

@@ -256,7 +256,7 @@ h2 {
 
 @media (max-width: 991px) {
     h2 {
-        font-size: 42px;
+        font-size: 40px;
     }
 }
 
@@ -1476,6 +1476,10 @@ input:-webkit-autofill:focus {
     z-index: 111;
     background-color: #fcfcfc;
     top: 0;
+}
+
+.header .btn--md {
+    font-size: 16px !important;
 }
 
 @media (min-width: 992px) {
@@ -3699,6 +3703,23 @@ input:-webkit-autofill:focus {
     position: relative;
 }
 
+.account-form .form-group .icon {
+    position: absolute;
+    padding: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 26px;
+    background-color: hsl(var(--white));
+    color: #CCCCCC;
+    font-size: 18px;
+}
+
+@media (max-width: 575px) {
+    .account-form .form-group .icon {
+        right: 20px;
+    }
+}
+
 .account-form .form-label {
     position: absolute;
     font-weight: 500;
@@ -3708,11 +3729,19 @@ input:-webkit-autofill:focus {
     padding-inline: 10px;
     transform: translateY(-50%);
     color: hsl(var(--dark)/0.4);
+    font-size: 16px;
 }
 
 .account-form .form--control {
     height: 64px;
     margin-top: 5px;
+    padding-inline: 22px;
+}
+
+@media (max-width: 575px) {
+    .account-form .form--control {
+        height: 60px;
+    }
 }
 
 .account-form .form--control::-webkit-input-placeholder {
@@ -3725,5 +3754,26 @@ input:-webkit-autofill:focus {
 
 .account-form .btn {
     margin-top: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+@media (max-width: 575px) {
+    .account-form .btn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.sign-in .form--control {
+    padding-right: 60px;
+}
+
+@media (max-width: 575px) {
+    .sign-in .form--control {
+        padding-inline: 15px;
+        padding-right: 50px;
+        height: 60px;
+    }
 }
 /*# sourceMappingURL=main.css.map */

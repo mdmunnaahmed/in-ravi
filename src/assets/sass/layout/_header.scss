@@ -5,6 +5,9 @@
 	z-index: 111;
 	background-color: #fcfcfc;
 	top: 0;
+	.btn--md {
+		font-size: 16px !important;
+	}
 	@include breakpoint(lg) {
 		top: 40px;
 	}
