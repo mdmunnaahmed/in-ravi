@@ -99,6 +99,7 @@ $colors: "primary" hsl(var(--primary)), "secondary" hsl(var(--secondary)), "succ
 .modal-btn-close {
 	border: 1px solid hsl(var(--border));
 	font-size: 14px;
-	right: 30px;
+	top: 20px;
+	right: 20px;
 	position: absolute;
 }

@@ -404,14 +404,59 @@
 }
 .dashborad-roadmap {
 	padding-top: 227px;
-	overflow: hidden;
 	@include breakpoint (max-xxl) {
 		padding-top: 50px;
 	}
+	.roadmap-slider {
+		.slick-dots {
+			bottom: -50px;
+			z-index: 2;
+			@include breakpoint (max-xl) {
+				bottom: -40px;
+			}
+			@include breakpoint (max-lg) {
+				bottom: -30px;
+			}
+		}
+	}
 }
+
+
 .roadmap-slider {
 	position: relative;
 	z-index: 2;
+	.slick-dots {
+		bottom: -100px;
+		@include breakpoint (max-xxl) {
+			bottom: -90px;
+		}
+		@include breakpoint (max-lg) {
+			bottom: -50px;
+		}
+		@include breakpoint (max-sm) {
+			bottom: -40px;
+		}
+		li {
+			background-color: hsl(var(--base) / .2);
+			width: 13px;
+			height: 13px;
+			margin: 0 6px;
+			border-radius: 50%;
+			@include breakpoint (max-xxl) {
+				width: 12px;
+				height: 12px;
+				margin: 0 5px;
+			}
+			@include breakpoint (max-sm) {
+				width: 11px;
+				height: 11px;
+				margin: 0 4px;
+			}
+			&.slick-active {
+				background-color: hsl(var(--base));
+			}
+		}
+	}
 	&::before {
 		position: absolute;
 		content: "";

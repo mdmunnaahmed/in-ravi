@@ -750,7 +750,8 @@ h6 {
 .modal-btn-close {
     border: 1px solid hsl(var(--border));
     font-size: 14px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     position: absolute;
 }
 
@@ -2364,6 +2365,15 @@ input:-webkit-autofill:focus {
     margin-top: 10px;
 }
 
+.o-h-500 {
+    height: 500px;
+    overflow-y: auto;
+}
+
+.progress-bg {
+    background: #1416193d !important;
+}
+
 .video-content {
     padding: 20px 0px;
     border-top: 1px solid hsl(var(--border));
@@ -2486,6 +2496,28 @@ input:-webkit-autofill:focus {
     bottom: 20px;
     left: 0;
     right: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+    background: #ccc;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track-piece {
+    background: white;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #b8b8b8;
+}
+
+.custom-scrollbar {
+    overflow-y: scroll;
+    scrollbar-color: #bdbdbd #ffffff;
+    scrollbar-width: thin;
 }
 
 /* Hide all steps by default: */
@@ -3309,7 +3341,6 @@ input:-webkit-autofill:focus {
 
 .dashborad-roadmap {
     padding-top: 227px;
-    overflow: hidden;
 }
 
 @media (max-width: 1399px) {
@@ -3318,9 +3349,76 @@ input:-webkit-autofill:focus {
     }
 }
 
+.dashborad-roadmap .roadmap-slider .slick-dots {
+    bottom: -50px;
+    z-index: 2;
+}
+
+@media (max-width: 1199px) {
+    .dashborad-roadmap .roadmap-slider .slick-dots {
+        bottom: -40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .dashborad-roadmap .roadmap-slider .slick-dots {
+        bottom: -30px;
+    }
+}
+
 .roadmap-slider {
     position: relative;
     z-index: 2;
+}
+
+.roadmap-slider .slick-dots {
+    bottom: -100px;
+}
+
+@media (max-width: 1399px) {
+    .roadmap-slider .slick-dots {
+        bottom: -90px;
+    }
+}
+
+@media (max-width: 991px) {
+    .roadmap-slider .slick-dots {
+        bottom: -50px;
+    }
+}
+
+@media (max-width: 575px) {
+    .roadmap-slider .slick-dots {
+        bottom: -40px;
+    }
+}
+
+.roadmap-slider .slick-dots li {
+    background-color: hsl(var(--base)/0.2);
+    width: 13px;
+    height: 13px;
+    margin: 0 6px;
+    border-radius: 50%;
+}
+
+@media (max-width: 1399px) {
+    .roadmap-slider .slick-dots li {
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 575px) {
+    .roadmap-slider .slick-dots li {
+        width: 11px;
+        height: 11px;
+        margin: 0 4px;
+    }
+}
+
+.roadmap-slider .slick-dots li.slick-active {
+    background-color: hsl(var(--base));
 }
 
 .roadmap-slider::before {
