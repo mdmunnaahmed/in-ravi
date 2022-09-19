@@ -9,7 +9,10 @@
 		font-size: 16px !important;
 	}
 	@include breakpoint(lg) {
-		top: 40px;
+		margin-top: 10px;
+	}
+	@include breakpoint(xxl) {
+		top: 30px;
 	}
 	&.sticky {
 		top: 0;

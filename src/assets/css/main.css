@@ -232,13 +232,13 @@ h1 {
     font-size: 80px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
     h1 {
-        font-size: 70px;
+        font-size: 64px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
     h1 {
         font-size: 60px;
     }
@@ -254,7 +254,7 @@ h2 {
     font-size: 48px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1399px) {
     h2 {
         font-size: 40px;
     }
@@ -456,19 +456,20 @@ h6 {
 }
 
 .btn {
-    padding: 19px 64px;
+    padding: 18px 60px;
     font-weight: 600;
     outline: none !important;
     box-shadow: none !important;
     border-radius: 6px;
     z-index: 1;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
 }
 
 @media (max-width: 1399px) {
     .btn {
-        font-size: 18px;
+        font-size: 17px;
+        padding: 13px 45px;
     }
 }
 
@@ -491,7 +492,8 @@ h6 {
 }
 
 .btn.btn--md {
-    padding: 10px 30px !important;
+    padding: 10px 20px !important;
+    font-size: 16px;
 }
 
 @media (max-width: 575px) {
@@ -1484,7 +1486,13 @@ input:-webkit-autofill:focus {
 
 @media (min-width: 992px) {
     .header {
-        top: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .header {
+        top: 30px;
     }
 }
 
@@ -2572,9 +2580,9 @@ input:-webkit-autofill:focus {
     position: relative;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1399px) {
     .banner-section {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 }
 
@@ -2593,7 +2601,8 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 1399px) {
     .banner-thumb {
-        max-width: 550px;
+        max-width: 450px;
+        top: 50px;
     }
 }
 
@@ -2645,6 +2654,14 @@ input:-webkit-autofill:focus {
     margin-bottom: 30px;
 }
 
+@media (max-width: 1399px) {
+    .banner-content .logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 991px) {
     .banner-content .logo {
         margin-inline: auto;
@@ -2665,6 +2682,12 @@ input:-webkit-autofill:focus {
     max-width: 290px;
 }
 
+@media (max-width: 1399px) {
+    .banner-content__subtitle {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 991px) {
     .banner-content__subtitle {
         margin-inline: auto;
@@ -2677,9 +2700,10 @@ input:-webkit-autofill:focus {
     position: relative;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
     .banner-content__title {
-        margin-top: 25px;
+        margin-top: 15px;
+        margin-bottom: 25px;
     }
 }
 
@@ -2687,11 +2711,23 @@ input:-webkit-autofill:focus {
     margin-top: 40px;
 }
 
+@media (max-width: 1399px) {
+    .banner-content .btn {
+        margin-top: 30px;
+    }
+}
+
 .banner-content .shape {
     position: absolute;
     bottom: -42px;
     transform: rotate(-7deg);
     left: 222px;
+}
+
+@media (max-width: 1399px) {
+    .banner-content .shape {
+        bottom: -20px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2713,6 +2749,12 @@ input:-webkit-autofill:focus {
     background: #ffffff;
     border: 1px solid hsl(var(--border));
     border-radius: 6px;
+}
+
+@media (max-width: 1399px) {
+    .border-content .title {
+        font-size: 20px;
+    }
 }
 
 .border-content .date-form-group {
@@ -2743,7 +2785,7 @@ input:-webkit-autofill:focus {
     margin-bottom: 42px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1399px) {
     .section-header {
         margin-bottom: 35px;
     }
@@ -2762,7 +2804,7 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 1399px) {
     .section-header__subtitle {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 
@@ -2785,7 +2827,7 @@ input:-webkit-autofill:focus {
 
 @media (max-width: 1399px) {
     .section-header__title {
-        font-size: 48px;
+        font-size: 42px;
     }
 }
 
@@ -3314,6 +3356,12 @@ input:-webkit-autofill:focus {
 .roadmap-slider .single-slide:nth-child(even) .roadmap-item {
     padding-top: 80px;
     margin-top: 180px;
+}
+
+@media (max-width: 1399px) and (min-width: 992px) {
+    .roadmap-slider .single-slide:nth-child(even) .roadmap-item {
+        margin-top: 198px;
+    }
 }
 
 .roadmap-slider .single-slide:nth-child(even) .roadmap-item::before {

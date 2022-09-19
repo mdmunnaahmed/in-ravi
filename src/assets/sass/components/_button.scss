@@ -1,15 +1,16 @@
 .btn{
-	padding: 19px 64px;
+	padding: 18px 60px;
 	font-weight: 600;
 	outline: none !important;
 	box-shadow: none !important;
 	@extend %transition;
 	border-radius: 6px;
 	z-index: 1;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1;
 	@include breakpoint (max-xxl) {
-		font-size: 18px;
+		font-size: 17px;
+		padding: 13px 45px;
 	}
 	@include breakpoint (max-sm) {
 		font-size: 16px;
@@ -23,7 +24,8 @@
 		}
 	}
 	&.btn--md {
-		padding: 10px 30px !important;
+		padding: 10px 20px !important;
+		font-size: 16px;
 		@include breakpoint(max-sm) {
 			padding-inline: 20px !important;
 		}

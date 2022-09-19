@@ -141,10 +141,10 @@ h6 > a {
 }
 h1 {
 	font-size: 80px;
-	@include breakpoint(max-xl) {
-		font-size: 70px;
+	@include breakpoint(max-xxl) {
+		font-size: 64px;
 	}
-	@include breakpoint(max-md) {
+	@include breakpoint(max-xl) {
 		font-size: 60px;
 	}
 	@include breakpoint(max-sm) {
@@ -153,7 +153,7 @@ h1 {
 }
 h2 {
 	font-size: 48px;
-	@include breakpoint(max-lg) {
+	@include breakpoint(max-xxl) {
 		font-size: 40px;
 	}
 	@include breakpoint(max-md) {

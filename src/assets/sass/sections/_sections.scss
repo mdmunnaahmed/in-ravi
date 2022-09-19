@@ -1,7 +1,7 @@
 // Section-Header Starts Here
 .section-header {
 	margin-bottom: 42px;
-	@include breakpoint(max-md) {
+	@include breakpoint(max-xxl) {
 		margin-bottom: 35px;
 	}
 	@include breakpoint(max-sm) {
@@ -11,7 +11,7 @@
 		font-weight: 600;
 		color: #6d6b72;
 		@include breakpoint(max-xxl) {
-			font-size: 36px;
+			font-size: 32px;
 		}
 		@include breakpoint(max-md) {
 			font-size: 28px;
@@ -24,7 +24,7 @@
 		font-size: 64px;
 		margin-bottom: 17px;
 		@include breakpoint(max-xxl) {
-			font-size: 48px;
+			font-size: 42px;
 		}
 		@include breakpoint(max-md) {
 			font-size: 42px;
@@ -446,6 +446,11 @@
 			.roadmap-item {
 				padding-top: 80px;
 				margin-top: 180px;
+				@include breakpoint(max-xxl) {
+					@include breakpoint(lg) {
+						margin-top: 198px;
+					}
+				}
 				&::before {
 					position: absolute;
 					content: "";
