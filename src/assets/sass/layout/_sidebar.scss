@@ -37,7 +37,7 @@
 .sidebar-top {
 	margin-bottom: 55px;
 	position: relative;
-	@include breakpoint(max-lg) {
+	@include breakpoint(max-xxl) {
 		margin-bottom: 30px;
 	}
 	.title {
@@ -53,6 +53,9 @@
 	li {
 		padding: 20px 0;
 		font-weight: 700;
+		@include breakpoint(max-xxl) {
+			padding: 18px 0;
+		}
 		&:not(:first-child) {
 			i {
 				font-size: 20px;
@@ -96,14 +99,15 @@
 	background-color: hsl(var(--white));
 	box-shadow: 0 9px 90px rgba(141, 158, 189, 0.12);
 	z-index: 11;
+	gap: 15px 25px;
+	@include breakpoint(max-xxl) {
+		padding: 12px 20px;
+	}
 	@include breakpoint(max-sm) {
 		padding: 10px 15px;
 	}
 }
 .header-left {
-	@include breakpoint(max-xxl) {
-		margin-bottom: 20px;
-	}
 	.icon {
 		cursor: pointer;
 	}
@@ -194,6 +198,9 @@
 }
 .content-top {
 	margin-bottom: 20px;
+	@include breakpoint(max-xxl) {
+		margin-bottom: 10px;
+	}
 	.content-left {
 		.form--control {
 			background-color: transparent;
@@ -231,6 +238,9 @@
 	padding-left: 15px;
 	margin: 30px 0;
 	font-size: 20px;
+	@include breakpoint(max-xxl) {
+		margin: 20px 0;
+	}
 	&::before {
 		position: absolute;
 		content: "";
@@ -262,6 +272,7 @@
 		&__header {
 			padding: 5px 0;
 			cursor: pointer;
+			gap: 10px 5px;
 			.title {
 				font-weight: 600;
 				font-size: 20px;
@@ -274,7 +285,10 @@
 					font-weight: 700;
 					color: hsl(var(--heading));
 					@include breakpoint(max-xxl) {
-						font-size: 28px;
+						font-size: 24px;
+					}
+					@include breakpoint(max-lg) {
+						font-size: 22px;
 					}
 				}
 			}
@@ -286,6 +300,7 @@
 				font-weight: 600;
 				text-align: center;
 				position: relative;
+				background-color: #c7c7c8;
 				.percentage {
 					position: absolute;
 					left: 50%;
@@ -300,6 +315,12 @@
 		}
 		&__content {
 			.video-content {
+				.left {
+					padding-right: 20px;
+				}
+				a {
+					word-break: break-all;
+				}
 				&:first-child {
 					margin-top: 10px;
 				}
@@ -416,19 +437,19 @@
 	right: 0;
 }
 .custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
+	width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-button {
-    background: #ccc;
+	background: rgb(226, 226, 226);
 }
 .custom-scrollbar::-webkit-scrollbar-track-piece {
-    background: rgb(255, 255, 255);
+	background: rgb(255, 255, 255);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(184, 184, 184);
+	background: rgb(216, 216, 216);
 }
 .custom-scrollbar {
-  overflow-y: scroll;
-  scrollbar-color: #bdbdbd #ffffff;
-  scrollbar-width: thin;
+	overflow-y: scroll;
+	scrollbar-color: #dfdfdf #ffffff;
+	scrollbar-width: thin;
 }

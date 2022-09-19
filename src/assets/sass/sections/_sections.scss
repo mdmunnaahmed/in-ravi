@@ -530,7 +530,7 @@
 	.title {
 		margin-bottom: 25px;
 		font-size: 40px;
-		@include breakpoint(max-xl) {
+		@include breakpoint(max-xxl) {
 			font-size: 35px;
 		}
 		@include breakpoint(max-lg) {
@@ -573,7 +573,7 @@
 	padding-bottom: 200px;
 	position: relative;
 	z-index: 1;
-	@include breakpoint(max-xl) {
+	@include breakpoint(max-xxl) {
 		padding-bottom: 100px;
 		padding-top: 40px;
 	}
@@ -605,6 +605,9 @@
 		border-radius: 11px;
 		border: 1px solid hsl(var(--border));
 		background-color: hsl(var(--white));
+		@include breakpoint(max-xxl) {
+			padding: 15px 20px 20px;
+		}
 		.text {
 			@include breakpoint(max-xl) {
 				margin-bottom: 10px;
@@ -621,14 +624,14 @@
 		}
 		.exam-select {
 			gap: 0 55px;
-			@include breakpoint(max-xl) {
+			@include breakpoint(max-xxl) {
 				gap: 0 45px;
 			}
 			@include breakpoint(max-lg) {
-				gap: 0px 30px;
+				gap: 8px 30px;
 			}
 			@include breakpoint(max-sm) {
-				gap: 5px 20px;
+				gap: 8px 20px;
 			}
 			.form-group {
 				display: flex;
@@ -652,7 +655,7 @@
 				font-size: 20px;
 				line-height: 1;
 				padding-left: 20px;
-				@include breakpoint(max-xl) {
+				@include breakpoint(max-xxl) {
 					font-size: 18px;
 					padding-left: 15px;
 				}
@@ -684,8 +687,8 @@
 		border-radius: 0;
 		margin-inline: 0;
 		width: 100px;
-		@include breakpoint(max-lg) {
-			width: 70px;
+		@include breakpoint(max-xxl) {
+			width: 75px;
 		}
 		@include breakpoint(max-sm) {
 			width: 50px;

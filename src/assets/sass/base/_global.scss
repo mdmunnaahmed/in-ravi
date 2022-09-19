@@ -166,7 +166,7 @@ h2 {
 
 h3 {
 	font-size: 30px;
-	@include breakpoint(max-xl) {
+	@include breakpoint(max-xxl) {
 		font-size: 26px;
 	}
 	@include breakpoint(max-xs) {
